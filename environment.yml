@@ -1,0 +1,16 @@
+name: TemperatureApi
+channels:
+  - conda-forge
+dependencies:
+  - python = 3.12
+  - pip
+  - pip:
+    - psycopg2
+    - django
+    - graphene-django
+    - channels
+    - daphne
+    - websockets
+    - asyncio
+    - pytest-django
+  
