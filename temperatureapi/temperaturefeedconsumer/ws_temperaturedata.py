@@ -7,7 +7,6 @@ from temperaturefeedconsumer.models import TemperatureReading
 
 
 def process_msg(data):
-    # print(data['payload']['data']['temperature'])
     reading = TemperatureReading.objects.create(temperature=data['payload']['data']['temperature'] , received_datetime=timezone.now())
     reading.save()
     

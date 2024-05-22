@@ -3,14 +3,19 @@ services:
     image: us.gcr.io/loft-orbital-public/hiring/challenges/ground-software/back-end/satellite-temperature
     ports: 
       - 1000:4000
-      
+
   database:
     image: postgres:16
     restart: always
     shm_size: 128mb
+    volumes:
+     - db:/tmp/postgres
     ports:
       - "5432:5432"
     environment:
         POSTGRES_DB: my_db
         POSTGRES_USER: my_user
         POSTGRES_PASSWORD: my_password
+
+volumes:
+  db:
