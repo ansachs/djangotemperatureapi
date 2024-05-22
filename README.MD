@@ -28,3 +28,6 @@ chmod +x temperatureapi/manage.py
 cd temperatureapi
 pytest
 ```
+
+## note on commented code
+- An attempt was made to remove unncessary auth and migration of auth tables, unfortunately, it appears that graphene is dependent on some of the models in the auth addon, and thus they were left in place

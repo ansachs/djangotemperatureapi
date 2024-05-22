@@ -1,6 +1,6 @@
 #! /bin/bash
 
-docker-compose up --detach --wait
+docker-compose up
 
 trap_exit() {
    docker-compose down --remove-orphans
