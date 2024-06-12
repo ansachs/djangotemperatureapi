@@ -1,6 +1,6 @@
 services:
   satellite-temperatures:
-    image: us.gcr.io/loft-orbital-public/hiring/challenges/ground-software/back-end/satellite-temperature
+    image: <see commit history for image name>
     ports: 
       - 1000:4000
 
